@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  <h3>Built For:</h3>
+  <p class="lead">
+    <img src="images/smart.png" alt="I'm Yeoman"><br>
+    <ul id="repos_list" ng-repeat="repo in main.reposList">
+      <li>
+        Repo name: {{repo.full_name}}
+      </li>
+    </ul>
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Ok!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row form">
+  <h4>Select user or organisation</h4>
+  <div>
+    <form id="profile_form">
+      Username: <input type="text" ng-model="main.username" name="username">
+      Search: <input type="submit" ng-click="main.fetchProfile(main.username)">
+    </form>
+  </div>
+</div>
