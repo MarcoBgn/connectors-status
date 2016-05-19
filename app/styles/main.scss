@@ -14,9 +14,15 @@ body {
   padding: 0;
 }
 
+.repo_container {
+  border: solid thin;
+  width: 450px;
+  height: 100px;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
+.form,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -59,7 +65,7 @@ body {
 }
 
 /* Supporting marketing content */
-.marketing {
+.form {
   margin: 40px 0;
 
   p + h4 {
@@ -75,7 +81,7 @@ body {
 
   /* Remove the padding we set earlier */
   .header,
-  .marketing,
+  .form,
   .footer {
     padding-left: 0;
     padding-right: 0;
