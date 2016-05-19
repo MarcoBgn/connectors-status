@@ -1,12 +1,14 @@
-# git-profile
+# git-profiler
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+This project has been completed for a technical test using AngularJS.
 
-## Build & development
+## Development - Local 
 
-Run `grunt` for building and `grunt serve` for preview.
+Run `grunt serve` for preview on your local machine.
 
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+Running `protractor` will run the integration tests with protractor. 
+ - In order to run protractor tests run `webdriver-manager start` on a saparate terminal window.
