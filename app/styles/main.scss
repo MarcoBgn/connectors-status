@@ -20,6 +20,14 @@ body {
   height: 100px;
 }
 
+.loading {
+  background-color: red;
+}
+
+.loaded {
+  background-color: lightgray;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .form,
