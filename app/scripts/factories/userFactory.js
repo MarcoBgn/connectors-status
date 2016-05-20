@@ -16,7 +16,7 @@ gitProfiler.factory('UserFactory', function ($http) {
       return self.profile;
     })
     .catch(function (response) {
-      throw response;
+      throw response.status;
     })
   }
   return UserFactory;

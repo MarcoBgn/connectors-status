@@ -24,4 +24,14 @@ describe('Service: ListRepos', function () {
       httpBackend.flush();
       expect(testVar.data.language).toEqual("Ruby");
     })
+    
+    it('throws an error if the request is unsuccessfull', function () {
+      httpBackend.whenGET(url).respond(function () {
+        return [404, {data: {}}, 'response body'];
+      })
+      ListRepos.parseUrl(url).then(function (response) {
+        testVar = response.data;
+      });
+      expect( function () { httpBackend.flush() } ).toThrow(404);
+    })
 })

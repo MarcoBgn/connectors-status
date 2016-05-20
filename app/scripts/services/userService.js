@@ -10,7 +10,7 @@ gitProfiler.service('ListRepos', function ($http) {
         return self.repoList;
       })
       .catch(function (response) {
-        throw response;
+        throw response.status;
       })
   };
 })

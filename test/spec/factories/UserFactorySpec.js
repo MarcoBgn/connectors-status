@@ -22,4 +22,14 @@ describe('Factory: UserFactory', function() {
     httpBackend.flush();
     expect(testVar.username).toEqual("MarcoCode");
   })
+  
+  it('Throws an error if the fetch is unsuccessfull', function () {
+    httpBackend.whenGET('https://api.github.com/users/marcocode').respond(function () {
+      return [403, {data :{}}, 'forbidden'];
+    });
+    user.getRepos(username).then(function (response) {
+      testVar = response.data;
+    });
+    expect(function () { httpBackend.flush() }).toThrow(403);
+  })
 })
