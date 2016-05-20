@@ -4,9 +4,13 @@ gitProfiler.service('ListRepos', function ($http) {
   var self = this;
   
   this.parseUrl = function (url) {
-    return $http.get(url).then(function (response) {
-      self.repoList = response
-      return self.repoList;
-    })
+    return $http.get(url)
+      .then(function (response) {
+        self.repoList = response
+        return self.repoList;
+      })
+      .catch(function (response) {
+        throw response;
+      })
   };
 })

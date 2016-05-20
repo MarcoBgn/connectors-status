@@ -10,9 +10,13 @@ gitProfiler.factory('UserFactory', function ($http) {
     
     var self = this;
     
-    return $http.get(gitAPIurl + 'users/' + username).then(function (response) {
+    return $http.get(gitAPIurl + 'users/' + username)
+    .then(function (response) {
       self.profile = response.data;
       return self.profile;
+    })
+    .catch(function (response) {
+      throw response;
     })
   }
   return UserFactory;

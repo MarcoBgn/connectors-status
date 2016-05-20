@@ -2,7 +2,7 @@
 
 describe('Service: ListRepos', function () {
     
-  var ListRepos, httpBackend, url;
+  var ListRepos, httpBackend, url, testVar;
     beforeEach(module('gitProfileApp'));
     beforeEach(inject(function ($controller, _ListRepos_, $httpBackend) {
       ListRepos = _ListRepos_;
@@ -15,11 +15,13 @@ describe('Service: ListRepos', function () {
     })
     
     it('returns a list of repos for the user or org', function () {
-      httpBackend.expectGET(url).respond(function () {
-        return [200, 'response body', {repo1: {name: "test", language: "Ruby"}}];
+      httpBackend.whenGET(url).respond(function () {
+        return [200, {data: {name: "test", language: "Ruby"}}, 'response body'];
       })
       ListRepos.parseUrl(url).then(function (response) {
-        expect(response.data.repo1.name).toEqual("test");
+        testVar = response.data;
       });
+      httpBackend.flush();
+      expect(testVar.data.language).toEqual("Ruby");
     })
 })
