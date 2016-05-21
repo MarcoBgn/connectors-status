@@ -28,9 +28,10 @@
       </div>
    </div>
    
-   <div class="pagination" ng-controller="PageCtrl as pager">
-     <uib-pager class='pagination_bar' items-per-page='pager.itemsPerPage' total-items="main.reposList.length" ng-model="pager.currentPage" ng-change='pager.pageChange()'>
-     </uib-pager>
+   <div class="pagination" ng-show="main.reposList">
+     <button id="previous_button" class="btn btn-md" value="Previous" ng-click="main.changePage(main.currentPage - 1)">Prev</button>
+     <div class="btn btn-md">{{main.currentPage}}</div>
+     <button id="next_button" class="btn btn-md" value="Previous" ng-click="main.changePage(main.currentPage + 1)">Next</button>
    </div>
     
 </div>

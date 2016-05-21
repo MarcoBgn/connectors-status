@@ -1,19 +1,16 @@
 'use strict';
 
 describe('Controller: AboutCtrl', function () {
-  beforeEach(module('gitProfileApp'));
 
-  var AboutCtrl,
-    scope;
+  var AboutCtrl;
 
-    beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    AboutCtrl = $controller('AboutCtrl', {
-      $scope: scope
-    });
-  }));
+    beforeEach(module('gitProfileApp'));
+    beforeEach(inject(function ($controller) {
+      AboutCtrl = $controller('AboutCtrl', {
+      });
+    }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(AboutCtrl.awesomeThings.length).toBe(3);
+  it('should provide a scope', function () {
+    expect(AboutCtrl.email).toEqual("admin@hecticmojo.com")
   });
 });
