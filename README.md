@@ -12,4 +12,4 @@ Run `grunt serve` for preview on your local machine.
 Running `grunt test` will run the unit tests with karma.
 
 Running `protractor` will run the integration tests with protractor. 
- - In order to run protractor tests run `webdriver-manager start` on a saparate terminal window.
+ - In order to run protractor tests run `webdriver-manager start` in a saparate terminal window.
