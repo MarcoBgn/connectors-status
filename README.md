@@ -2,6 +2,10 @@
 
 This project has been completed for a technical test using AngularJS (TDD with Karma/Protractor).
 
+```
+Visit App on [Heroku](https://smart-pension-git-repos.herokuapp.com/) 
+```
+
 
 ## Development - Local 
 
