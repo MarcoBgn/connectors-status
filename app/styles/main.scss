@@ -10,14 +10,75 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+h4 {
+   text-shadow:1px 1px 1px #000000;
+}
+
 body {
   padding: 0;
 }
 
+.list_container {
+  text-align: center;
+}
+
 .repo_container {
+  text-align: center;
   border: solid thin;
+  border-radius: 16px;
   width: 450px;
   height: 100px;
+  
+  background-image: -ms-linear-gradient(top, rgb(187,227,242) 0% , rgb(255,255,255) 50% , rgb(187,227,242) 100% );
+  background-image: -moz-linear-gradient(top, rgb(187,227,242) 0% , rgb(255,255,255) 50% , rgb(187,227,242) 100% );
+  background-image: -o-linear-gradient(top, rgb(187,227,242) 0% , rgb(255,255,255) 50% , rgb(187,227,242) 100% );
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(187,227,242)), color-stop(50, rgb(255,255,255)), color-stop(100, rgb(187,227,242)));
+  background-image: -webkit-linear-gradient(top, rgb(187,227,242) 0% , rgb(255,255,255) 50% , rgb(187,227,242) 100% );
+  background-image: linear-gradient(to bottom, rgb(187,227,242) 0% , rgb(255,255,255) 50% , rgb(187,227,242) 100% );
+  
+  -moz-box-shadow:inset 2px 1px 3px #000000;
+  -webkit-box-shadow:inset 2px 1px 3px #000000;
+  box-shadow:inset 2px 1px 3px #000000;
+
+  transition:All 0.333s ease;
+  -webkit-transition:All 0.333s ease;
+  -moz-transition:All 0.333s ease;
+  -o-transition:All 0.333s ease;
+  transform: rotate(0deg) scale(0.935) skew(1deg) translate(-12px);
+  -webkit-transform: rotate(0deg) scale(0.935) skew(1deg) translate(-12px);
+  -moz-transform: rotate(0deg) scale(0.935) skew(1deg) translate(-12px);
+  -o-transform: rotate(0deg) scale(0.935) skew(1deg) translate(-12px);
+  -ms-transform: rotate(0deg) scale(0.935) skew(1deg) translate(-12px);
+}
+
+.repo_container:hover {
+  text-align: center;
+  border: solid thin;
+  border-radius: 16px;
+  width: 450px;
+  height: 100px;
+  
+  background-image: -ms-linear-gradient(left, rgb(23,145,227) 0% , rgb(255,255,255) 50% , rgb(23,145,227) 100% );
+  background-image: -moz-linear-gradient(left, rgb(23,145,227) 0% , rgb(255,255,255) 50% , rgb(23,145,227) 100% );
+  background-image: -o-linear-gradient(left, rgb(23,145,227) 0% , rgb(255,255,255) 50% , rgb(23,145,227) 100% );
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgb(23,145,227)), color-stop(50, rgb(255,255,255)), color-stop(100, rgb(23,145,227)));
+  background-image: -webkit-linear-gradient(left, rgb(23,145,227) 0% , rgb(255,255,255) 50% , rgb(23,145,227) 100% );
+  background-image: linear-gradient(to right, rgb(23,145,227) 0% , rgb(255,255,255) 50% , rgb(23,145,227) 100% );
+  
+  transform: rotate(3deg) scale(0.998) skew(-9deg) translate(16px);
+  -webkit-transform: rotate(3deg) scale(0.998) skew(-9deg) translate(16px);
+  -moz-transform: rotate(3deg) scale(0.998) skew(-9deg) translate(16px);
+  -o-transform: rotate(3deg) scale(0.998) skew(-9deg) translate(16px);
+  -ms-transform: rotate(3deg) scale(0.998) skew(-9deg) translate(16px);
+}
+
+.form_field {
+  text-align: center; 
+}
+
+#search_form {
+  width: 200px;
+  height: 38px;
 }
 
 .loading {
@@ -64,15 +125,14 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #1aa3ff;
 
   .btn {
-    font-size: 21px;
+    font-size: 18px;
     padding: 14px 24px;
   }
 }
 
-/* Supporting marketing content */
 .form {
   margin: 40px 0;
 
@@ -100,6 +160,12 @@ body {
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
+    background-image: -ms-linear-gradient(top left, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+    background-image: -moz-linear-gradient(top left, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+    background-image: -o-linear-gradient(top left, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgb(26,163,255)), color-stop(50, rgb(255,255,255)), color-stop(100, rgb(26,163,255)));
+    background-image: -webkit-linear-gradient(top left, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+    background-image: linear-gradient(to bottom right, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
     border-bottom: 0;
   }
 }

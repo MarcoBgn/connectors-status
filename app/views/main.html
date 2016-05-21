@@ -1,28 +1,36 @@
 <div class="jumbotron">
-  <h3>Built For:</h3>
-  <p class="lead">
-    <img src="images/smart.png" alt="smart_p"><br>
+    <span> <h4>Built For:</h4> <img src="images/smart.png" alt="smart_p"></span><br>
     <label ng-show="main.reposList">
       Filter: <input type="text" ng-model="query" placeholder="language, year etc...">
     </label>
-    <ul id="repos_list" ng-repeat="repo in main.reposList | filter:query">
-      <div class="repo_container">
-        <li>
-          Name: {{repo.name}} </br><span class="glyphicon glyphicon-hash"> Description: {{repo.description}} </span></br>
-          Fork: {{repo.fork}} <span> Created: {{repo.created_at}} </span></br>
-          Language: {{repo.language}} <span> Size: {{repo.size}} </span>
-        </li>
+  
+    <div class="list_container">
+      <ul id="repos_list" ng-repeat="repo in main.reposList | filter:query">
+        <a ng-href="{{repo.html_url}}"><div class="repo_container">
+          <li>
+            Name: {{repo.name}} </br><span class="glyphicon"> Description: {{repo.description}} </span></br>
+            Fork: {{repo.fork}} <span class="glyphicon"> Created: {{repo.created_at}} </span></br>
+            Language: {{repo.language}} <span class="glyphicon"> Size: {{repo.size}} </span>
+          </li>
+        </div></a>
+      </ul>
+    </div>
+    
+    
+    <div class="row form_field">
+      <h4>Type a GitHub user or organisation</h4>
+      <h4>to browse public repositories:</h4>
+      <div class="search_field">
+        <form id="profile_form">
+          <input id="search_form" type="text" ng-model="main.username" name="username">
+          <input id="search_button" class="btn btn-lg btn-success" type="submit" value="Search" ng-click="main.fetchProfile(main.username)">
+        </form>
       </div>
-    </ul>
-  </p>
-</div>
-
-<div class="row form">
-  <h4>Type a GitHub user or organisation:</h4>
-  <div>
-    <form id="profile_form">
-      <input id="search_form" type="text" ng-model="main.username" name="username">
-      <input id="search_button" class="btn btn-lg btn-success" type="submit" value="Search" ng-click="main.fetchProfile(main.username)">
-    </form>
-  </div>
+   </div>
+   
+   <div class="pagination" ng-controller="PageCtrl as pager">
+     <uib-pager class='pagination_bar' items-per-page='pager.itemsPerPage' total-items="main.reposList.length" ng-model="pager.currentPage" ng-change='pager.pageChange()'>
+     </uib-pager>
+   </div>
+    
 </div>
