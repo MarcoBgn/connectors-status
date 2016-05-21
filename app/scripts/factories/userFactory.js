@@ -1,6 +1,6 @@
 'use strict';
 
-gitProfiler.factory('UserFactory', function ($http) {
+gitProfiler.factory('UserFactory', ['$http', function ($http) {
   var gitAPIurl = 'https://api.github.com/';
   
   var UserFactory = function () {
@@ -19,4 +19,4 @@ gitProfiler.factory('UserFactory', function ($http) {
       })
   }
   return UserFactory;
-})
+}])

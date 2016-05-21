@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gitProfileApp')
-  .controller('MainCtrl', function (UserFactory, ListRepos, PagerFactory) {
+  .controller('MainCtrl', ['UserFactory', 'ListRepos', 'PagerFactory', '$anchorScroll', function (UserFactory, ListRepos, PagerFactory, $anchorScroll) {
     var user = new UserFactory(),
         pager = new PagerFactory(), 
         self = this;
@@ -24,5 +24,6 @@ angular.module('gitProfileApp')
       ListRepos.parseUrl(self.entry.repos_url + '?page=' + page + '&per_page=5').then(function (response) {
         self.reposList = response.data;
       });
+      $anchorScroll();
     }
-});
+}]);

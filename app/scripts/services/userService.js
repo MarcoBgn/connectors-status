@@ -1,6 +1,6 @@
 'use strict';
 
-gitProfiler.service('ListRepos', function ($http) {
+gitProfiler.service('ListRepos', ['$http', function ($http) {
   var self = this;
   
   this.parseUrl = function (url) {
@@ -13,4 +13,4 @@ gitProfiler.service('ListRepos', function ($http) {
         throw response.status;
       })
   };
-})
+}])
