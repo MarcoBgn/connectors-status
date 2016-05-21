@@ -45,5 +45,8 @@
     "test": "karma start test/karma.conf.js"
   },
   "dependencies": {
+    "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "gzippo": "^0.2.0"
   }
 }

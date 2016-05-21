@@ -1,6 +1,7 @@
-# git-profiler
+# GitHub Public Repositories Finder
 
-This project has been completed for a technical test using AngularJS.
+This project has been completed for a technical test using AngularJS (TDD with Karma/Protractor).
+
 
 ## Development - Local 
 
