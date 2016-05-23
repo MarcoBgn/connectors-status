@@ -55,7 +55,7 @@ body {
   text-align: center;
   border: solid thin;
   border-radius: 16px;
-  width: 450px;
+  max-width: 580px;
   height: 100px;
   
   background-image: -ms-linear-gradient(left, rgb(23,145,227) 0% , rgb(255,255,255) 50% , rgb(23,145,227) 100% );
@@ -65,11 +65,11 @@ body {
   background-image: -webkit-linear-gradient(left, rgb(23,145,227) 0% , rgb(255,255,255) 50% , rgb(23,145,227) 100% );
   background-image: linear-gradient(to right, rgb(23,145,227) 0% , rgb(255,255,255) 50% , rgb(23,145,227) 100% );
   
-  transform: rotate(1deg) scale(0.998) skew(-2deg) translate(16px);
-  -webkit-transform: rotate(1deg) scale(0.998) skew(-2deg) translate(16px);
-  -moz-transform: rotate(1deg) scale(0.998) skew(-2deg) translate(16px);
-  -o-transform: rotate(1deg) scale(0.998) skew(-2deg) translate(16px);
-  -ms-transform: rotate(1deg) scale(0.998) skew(-2deg) translate(16px);
+  transform: rotate(1deg) scale(0.998) skew(-1deg) translate(6px);
+  -webkit-transform: rotate(1deg) scale(0.998) skew(-1deg) translate(6px);
+  -moz-transform: rotate(1deg) scale(0.998) skew(-1deg) translate(6px);
+  -o-transform: rotate(1deg) scale(0.998) skew(-1deg) translate(6px);
+  -ms-transform: rotate(1deg) scale(0.998) skew(-1deg) translate(6px);
 }
 
 .form_field {
