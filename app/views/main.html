@@ -16,21 +16,22 @@
       </ul>
     </div>
     
-    
     <div class="row form_field">
       <h4>Type a GitHub user or organisation</h4>
-      <h4>to browse public repositories:</h4>
-      <div class="search_field">
-        <form id="profile_form">
-          <input id="search_form" type="text" ng-model="main.username" name="username">
-          <input id="search_button" class="btn btn-lg btn-success" type="submit" value="Search" ng-click="main.fetchProfile(main.username)">
-        </form>
-      </div>
-   </div>
+        <h4>to browse public repositories:</h4>
+          <div class="search_field">
+            <form id="profile_form">
+             Username: <input id="search_form" type="text" ng-model="main.username" name="username"><br>
+             Results per page: <select id="per_page" ng-model="main.perPage" value="5" ng-options="value for value in [5, 7, 10]">
+              </select>
+              <input id="search_button" class="btn btn-sm btn-success" type="submit" value="Search" ng-click="main.fetchProfile(main.username, main.perPage)">
+            </form>
+          </div>
+    </div>
    
    <div class="pagination" ng-show="main.reposList">
      <button id="previous_button" class="btn btn-md" value="Previous" ng-click="main.changePage(main.currentPage - 1)">Prev</button>
-     <div class="btn btn-md">{{main.currentPage}}</div>
+       <div class="btn btn-md">{{main.currentPage}}</div>
      <button id="next_button" class="btn btn-md" value="Previous" ng-click="main.changePage(main.currentPage + 1)">Next</button>
    </div>
     
