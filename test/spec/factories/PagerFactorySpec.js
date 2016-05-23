@@ -2,7 +2,7 @@
 
 describe('Factory: PagerFactory', function() {
   
-  var pagerFactory, self, currentPage, pager, entry;
+  var pagerFactory, self, currentPage, pager, entry, perPage;
   
   beforeEach(module('gitProfileApp'));
   beforeEach(inject(function ($controller, _PagerFactory_) {
@@ -10,6 +10,7 @@ describe('Factory: PagerFactory', function() {
     pager = new pagerFactory();
     self = this;
     self.currentPage = 1;
+    self.perPage = 5;
     self.entry = {public_repos: 50}
     
   }));
