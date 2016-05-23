@@ -20,8 +20,8 @@ gitProfiler.factory('PagerFactory', function () {
   PagerFactory.prototype.guardNext = function (page, scope) {
     
     var self = scope;
-      if (page >= Math.round(self.entry.public_repos / 5)) {
-        self.currentPage = Math.round(self.entry.public_repos / 5);
+      if (page >= Math.round(self.entry.public_repos / self.perPage)) {
+        self.currentPage = Math.round(self.entry.public_repos / self.perPage);
         $('#next_button').prop('disabled', true);
       } else {
         $('#next_button').prop('disabled', false);
