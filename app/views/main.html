@@ -5,7 +5,7 @@
     </label>
   
     <div class="list_container">
-      <ul id="repos_list" ng-repeat="repo in main.reposList | filter:query">
+      <ul class="center-block" id="repos_list" ng-repeat="repo in main.reposList | filter:query">
         <a ng-href="{{repo.html_url}}"><div class="repo_container">
           <li>
             Name: {{repo.name}} <br> <span class="glyphicon"> Description: {{repo.description}} </span><br>

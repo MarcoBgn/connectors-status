@@ -26,7 +26,7 @@ body {
   text-align: center;
   border: solid thin;
   border-radius: 16px;
-  width: 450px;
+  max-width: 580px;
   height: 100px;
   
   background-image: -ms-linear-gradient(top, rgb(187,227,242) 0% , rgb(255,255,255) 50% , rgb(187,227,242) 100% );
@@ -85,6 +85,10 @@ body {
   height: 38px;
 }
 
+.center-block {
+  text-align: centre;
+}
+
 .loading {
   background-color: red;
 }
@@ -125,6 +129,13 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #1aa3ff;
+  background-image: -ms-linear-gradient(top left, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+  background-image: -moz-linear-gradient(top left, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+  background-image: -o-linear-gradient(top left, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgb(26,163,255)), color-stop(50, rgb(255,255,255)), color-stop(100, rgb(26,163,255)));
+  background-image: -webkit-linear-gradient(top left, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+  background-image: linear-gradient(to bottom right, rgb(26,163,255) 0% , rgb(255,255,255) 50% , rgb(26,163,255) 100% );
+  border-bottom: 0;
 
   .btn {
     font-size: 18px;
