@@ -1,18 +1,25 @@
 <div class="jumbotron">
-    <span> <h4>Built For:</h4> <div class="img_container"><img src="images/smart.png" alt="smart_p"></div></span><br>
+    <div>
+       <h4>Built For:</h4>
+         <div class="img_container">
+           <img src="images/smart.png" alt="smart_p">
+         </div>
+    </div><br>
+    
     <label ng-show="main.reposList">
       Filter: <input type="text" ng-model="query" placeholder="language, year etc...">
     </label>
   
     <div class="list_container">
       <ul class="center-block" id="repos_list" ng-repeat="repo in main.reposList | filter:query">
-        <a ng-href="{{repo.html_url}}"><div class="repo_container">
+        <div class="repo_container">
           <li>
-            Name: {{repo.name}} <br> <span class="glyphicon"> Description: {{repo.description}} </span><br>
+            <a ng-href="{{repo.html_url}}"> Name: {{repo.name}} </a><br> 
+            <span class="glyphicon"> Description: {{repo.description}} </span><br>
             Fork: {{repo.fork}} <span class="glyphicon"> - Created: {{repo.created_at}} </span><br>
             Language: {{repo.language}} <span class="glyphicon"> - Size: {{repo.size}} </span>
           </li>
-        </div></a>
+        </div>
       </ul>
     </div>
     
@@ -32,7 +39,7 @@
    <div class="pagination" ng-show="main.reposList">
      <button id="previous_button" class="btn btn-md" value="Previous" ng-click="main.changePage(main.currentPage - 1)">Prev</button>
        <div class="btn btn-md">{{main.currentPage}}</div>
-     <button id="next_button" class="btn btn-md" value="Previous" ng-click="main.changePage(main.currentPage + 1)">Next</button>
+     <button id="next_button" class="btn btn-md" value="Next" ng-click="main.changePage(main.currentPage + 1)">Next</button>
    </div>
     
 </div>
