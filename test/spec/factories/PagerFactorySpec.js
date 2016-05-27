@@ -12,7 +12,6 @@ describe('Factory: PagerFactory', function() {
     self.currentPage = 1;
     self.perPage = 5;
     self.entry = {public_repos: 50}
-    
   }));
   
   it('Serve as helper to guard pagination functionalities (Previous)', function () {
